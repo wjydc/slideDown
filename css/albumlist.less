@@ -1,0 +1,75 @@
+@titleColor:#19181e ;
+@borderColor: #e3e4e6;
+.albumlistBox{
+    .top{
+        width:100%;
+        height:4.68rem;
+        background: url(../img/bookbg.jpg) no-repeat;
+        background-size:auto 4.2rem;
+        background-position: 0.4rem 0.5rem;
+        overflow: hidden;
+        padding:0.53rem 0.4rem 0.4rem;
+        .bookCover{
+            display: block;
+            width:2.93rem;
+            height: 2.93rem;
+            border-radius:0.13rem;
+            overflow: hidden;
+            float: left;
+            position: relative;
+            margin-right:0.4rem;
+            img{
+                width:100%;
+                height: 100%;
+            }
+        }
+        .des{
+           padding-top: .31rem;
+            span{
+                font-size: .38rem;
+                color:#808080 ;
+                display: block;
+                padding-bottom: .16rem;
+               
+            }
+            .title{
+                height:1.1rem;
+                line-height:1.1rem;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                font-size: .56rem;
+                color:@titleColor ;
+            }
+        }
+    }
+    .list{
+        .albumTitle{
+           border-bottom: 2px solid @borderColor;
+            color:@titleColor ;
+            .line{
+                background-color: #5799f8;
+            }
+        }
+        ul{
+            li{
+                a{
+                    background: url('../img/list-play.jpg') no-repeat 0.4rem center;
+                    background-size: 0.8rem 0.8rem;
+                    padding:0 0 0 1.5rem;
+                    p{
+                        color:#444f5f;
+                        border-bottom: 0.01rem solid @borderColor;
+                        background: url('../img/arrow.jpg') no-repeat 95% center;
+                        background-size: 0.3rem 0.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btnGrounp{
+    background-color: #fff;
+}
+

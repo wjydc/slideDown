@@ -1,0 +1,322 @@
+@titleColor:#fff;
+@borderColor:#fff;
+
+.audioStation{
+	.swiper-container-scrollbar{
+		.swiper-slide{
+			width:100%;
+		    height: auto;
+		    background-color: transparent;
+		}
+	}
+	// 列表
+	.audioList{
+		width:100%;
+		 .list{
+	        .albumTitle{
+	        	padding:0.4rem;
+	           border-bottom: 1px solid @borderColor;
+	           border-top: 1px solid @borderColor;
+	            color:@titleColor ;
+	            .line{
+	                background-color:@borderColor;
+	            }
+	        }
+	        ul{
+	            li{
+	                a{
+	                    background: url('../img/list-play-white.jpg') no-repeat 0.4rem center;
+	                    background-size: 0.8rem 0.8rem;
+	                    padding:0 0 0 1.5rem;
+	                    p{
+	                        color:#fff;
+	                        border-bottom: 0.01rem solid @borderColor;
+	                        background: url('../img/arrow-white.jpg') no-repeat 95% center;
+	                        background-size: 0.3rem 0.4rem;
+	                    }
+	                }
+	            }
+	        }
+	    }
+		
+	}
+}
+
+
+
+.btnGrounp{
+	background-color: #fff;
+	 .btn-inline{
+	 	width:100%;
+		height: 1.87rem; 
+		text-align: center;
+		position: absolute;
+		top:0;
+		left:0;
+		z-index: 600;
+
+	 }
+	 .btnblur{
+	 	position: absolute;
+	 	z-index: 500;
+	 	img{
+	 		width:100%;
+	 		height: 100%;
+	 		  -webkit-filter: blur(30px); /* Chrome, Opera */
+            -moz-filter: blur(30px);
+            -ms-filter: blur(30px);    
+              filter: blur(30px);  
+	 	}
+	 	p{
+	 		position: absolute;
+	 		top:0;
+	 		left: 0;
+	 		// z-index:600;
+	 		width:100%;
+	 		height: 100%;
+	 		background-color: #000;
+	 		opacity: 0.3;
+	 	}
+	 }
+	
+}
+
+
+
+// 音频
+.playBox{
+	width:100%;
+	position: absolute;
+	z-index: 10;
+	.side-down{
+		margin-top:0.8rem;
+	}
+	// 标题
+	.cdText{
+		color:#fff;
+		text-align: center;
+		margin:0.53rem 0 0;
+		p{
+			line-height: 1.5;
+		}
+		.title{
+			width:80%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			font-size:0.48rem;
+			margin:0 auto;
+		}
+		.author{
+			font-size: 0.32rem;
+		}
+	}
+	// 封面
+	.cdBox{
+		width:5.6rem;
+		height: 5.6rem;
+		border-radius: 0.13rem;
+		overflow: hidden;
+		margin:0.8rem auto;
+		.coverBox{
+			width:100%;
+			height: 100%;
+			img{
+			width:100%;
+			height: 100%;
+			}
+		}
+	}
+
+	.controlBox{
+	    width: 100%;
+	    height:auto;
+	}
+	#playContent{
+		
+	    font-size:0.27rem;
+		color: #666;
+		position: relative;
+		width: 90%;
+		z-index: 50;
+		margin: 0 auto;
+		
+	}
+	#currentTime { 
+		float: left;
+		// margin-left: 0.16rem;
+	}
+	#totleTime { 
+		float: right;
+		// margin-right: 0.16rem;
+	}
+	.timeBox{
+		overflow: hidden;
+		/*height:0.39rem;*/
+		color:#fff;
+		padding-top: 0.3rem;
+	}
+	#progressWrap{
+		height:2px;
+		width: 100%;
+		background: #828079;
+		position: relative;
+	}
+	#progress{
+		background: #fff;
+		height:2px;
+		position: absolute;
+		width: 0;top: 0;
+		left: 0;
+		display: none;
+	}
+	#progress:after{
+		content: "";
+		position: absolute;
+		width:10px;
+		background: #fff;
+		height:10px;
+		top: -3px;
+		right:0;
+		border-radius: 50%;
+	}
+
+
+	.controlBox ul{
+	    overflow: hidden;
+	    margin-top:1.2rem;
+	}
+	.controlBox .playbg{
+		/*margin:0 2.5rem;*/
+	}
+	.controlBox li{
+	    float: left;
+	    text-align: center;
+	    width: 33.33%;
+	}
+	.controlBox a{
+		width:1.2rem;
+		height:1.2rem;
+		display: inline-block;
+
+	}
+	.controlBox .playbg{
+	    height:1.6rem;
+	    text-align: center;
+	    background: url('../img/playbg.png') no-repeat center center;
+	    background-size: 1.6rem 1.6rem;
+	    // background-position: 50%;
+	}
+	.controlBox .playbg a{
+		width: 1.6rem;
+		 height:1.6rem;
+	}
+	.controlBox a.pause{
+		background:url('../img/out.png') no-repeat center center;    
+		background-size:0.53rem 0.67rem;
+		// background-position:25px 18px;
+	}
+	.controlBox a.play{
+		background:url('../img/play.png') no-repeat center center;
+		background-size:0.53rem 0.67rem;
+		// background-position:28px 18px;
+		
+	}
+	.controlBox a.next{
+		background:url('../img/next.png') no-repeat center center;
+		background-size:1.2rem 1.2rem;      
+		cursor: pointer;
+		margin-top:0.2rem;
+		
+	}
+
+	.controlBox a.next-none{
+		background:url('../img/next-none.png') no-repeat center center;
+		background-size:1.2rem 1.2rem;      
+		cursor: pointer;
+		margin-top:0.2rem;
+		
+	}
+
+	.controlBox a.prev{
+		background:url('../img/pre.png') no-repeat center center; 
+		background-size: 1.2rem 1.2rem;       
+		cursor: pointer;
+	    margin-top:0.2rem;
+	}
+	.controlBox a.prev-none{
+		background:url('../img/pre-none.png') no-repeat center center; 
+		background-size: 1.2rem 1.2rem;       
+		cursor: pointer;
+	    margin-top:0.2rem;
+	}
+
+
+}
+
+
+
+// 电台
+
+.radioStation{
+	.playBox{
+		// position: relative;;
+	}
+	.radioStationWrap{
+		height: 7.5rem;
+		position:relative;
+		// top:0;
+		// left: 0;
+		margin-bottom:0.8rem;
+		.cdText{
+			width:100%;
+			height: 100%;
+			position:relative;
+			z-index: 5;
+			margin: 0;
+			background: url('../img/titlebg.png') no-repeat;
+			background-size: 100% auto;
+			padding-top: 0.53rem;
+
+		}
+		.cdBox{
+			position:relative;
+			z-index: 3;
+		}
+		.mask{
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height: 100%;
+			
+			z-index: 4;
+			img{
+				width:100%;
+				height: 100%;
+			}
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

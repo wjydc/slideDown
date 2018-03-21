@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src='../plugIn/libflexible/flexible_css.debug.js'></script>
+    <script src="../plugIn/libflexible/flexible.debug.js"></script>
+    <script>src="../plugIn/libflexible/makegrid.debug.js"</script>
+    <link rel="stylesheet" type="text/css" href="../plugIn/swiper/dist/css/swiper.min.css">
+    <title>音频播放+列表</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/audioStation.css">
+
+</head>
+<body>
+<div class="wrap audioStation">
+    <div class="swiper-container swiper-container-v">
+        <div class="swiper-wrapper">
+        <!-- 播放 -->
+            <div class="swiper-slide">
+               <div class="blur">
+                    <img src="../img/book.jpg" alt="">
+                     <p></p>
+                </div>
+				<div class="playBox">
+					<div class="cdText">
+					 	<p class="title">第1期 我是标题</p>
+        				<p class="author">- 陈哥广播剧 -</p>
+        			</div>
+					<div class="cdBox">
+				        <div class="coverBox">
+				            <img class="coverImage" src="../img/book.jpg">
+				        </div>
+				    </div>
+
+				    <!-- 控制器 -->
+				    <div class="controlBox">
+				        <div id="playContent">
+				            <div onclick="myControl.selectTime(event)" id="progressWrap">
+				                <div id="progress" style="display: block; width: 2px;"></div>
+				                <div class="timeBox"><span id="currentTime">00:00</span><span id="totleTime">12:30</span></div>
+				            </div>
+				        </div>
+				        <ul>
+				            <li class="fl">
+
+				            	<!-- 无上一章，添加类名 prev-none -->
+				                <a id="prevButton" class="prev" href="javascript:;"></a>
+				              <!--  <a id="prevButton" class="prev-none" href="javascript:;"></a> -->
+				            </li>
+				            <li class="playbg fl">
+				                <a id="playButton" onclick="myControl.mainControl()" class="play"></a>
+				            </li>
+				            <li class="fr">
+				            	<!-- 无上一章，添加类名 next-none -->
+				                <!-- <a id="nextButton" class="next" href="javascript:;"></a> -->
+				                 <a id="nextButton" class="next-none" href="javascript:;"></a>
+				            </li>
+				        </ul>
+
+    				</div>
+
+    				<!-- 上滑 -->
+    				<p class="side-down">
+                        <img src="../img/slideup.png"><br><span>上滑显示专辑列表</span>
+                    </p>
+
+
+				</div>
+
+
+
+
+            </div>
+        <!-- 列表 -->
+            <div class="swiper-slide">
+                <!-- 磨砂背景 -->
+                <div class="blur">
+                    <img src="../img/book.jpg" alt="">
+                     <p></p>
+                </div>
+                <div class="swiper-container swiper-container-scrollbar">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="audioList">
+                                <p class="side-down">
+                                    <img src="../img/slide.png"><br><span>下滑隐藏往期列表</span>
+                                </p>
+                                <div class="list">
+                                    <p class="albumTitle"><span class="line"></span>往期列表</p>
+                                    <ul>
+                                        <li><a href="#"><p>第1期 我是标题我破解文件博I破旧的vod不计免赔色不寂寞跑得快V配色哦吧</p></a></li>
+                                        <li><a href="#"><p>第1期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第2期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第3期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第4期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第5期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第6期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第7期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第8期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第9期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第10期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第11期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第12期 我是标题</p></a></li>
+                                        <li><a href="#"><p>第13期 我是标题</p></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                                        
+                        </div>
+                                   
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+            </div>
+             
+        </div> 
+    </div>
+</div>
+  
+
+     <div class="btnGrounp">
+         <div class="btn-inline">
+               <a class="whiteShare"><img src="../img/whiteshare.jpg">分享</a>
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.hzpz.ninebirdsfm.android" class="whiteDown"><img src="../img/whitedown.jpg">下载APP</a>
+         </div>
+      
+        <div class="btnblur">
+            <img src="../img/book.jpg" alt="">
+            <p></p>
+        </div>
+    </div>
+
+
+ <audio id="myMusic">
+      <source src="http://file.huaxiazi.com/mp3/济公全传/jgqz001.mp3" type="audio/ogg">
+      <source src="http://file.huaxiazi.com/mp3/济公全传/jgqz001.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+
+</body>
+<script type="text/javascript" src='../plugIn/jquery.js'></script>
+<script type="text/javascript" src="../plugIn/swiper/dist/js/swiper.min.js"></script>
+
+<script type="text/javascript" src="../plugIn/listenjs/tsall.js"></script>
+
+
+
+
+<script>
+   
+var swiperV = new Swiper('.swiper-container-v', {
+    direction: 'vertical'
+});
+
+var swiperScrollbar = new Swiper('.swiper-container-scrollbar', {
+    scrollbar: '.swiper-container-scrollbar .swiper-scrollbar',
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    mousewheelControl: true,
+    freeMode: true,
+    nested: true
+});
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
